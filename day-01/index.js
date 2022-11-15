@@ -14,4 +14,12 @@ function titleCase(sentence) {
   .join(' ');
 }
 
-module.exports = { reverseSentence, titleCase };
+function oddishOrEvenish(number) {
+  const digitSum = number.toString()
+    .split('')
+    .reduce((a, b) => a + Number(b), 0);
+  
+  return digitSum % 2 === 0 ? 'Evenish' : 'Oddish'
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish };

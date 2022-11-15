@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -9,6 +9,12 @@ describe('primitive code challenges', () => {
   describe('titleCase', () => {
     it('should convert a sentence to title case', () => {
       expect(titleCase('alchemy ROCKS goLD')).toEqual('Alchemy Rocks Gold');
+    })
+  })
+  describe('oddishOrEvenish', () => {
+    it('should return evenish if the sum of digits is even and oddish if the sum of digits is odd', () => {
+      expect(oddishOrEvenish(121)).toEqual('Evenish');
+      expect(oddishOrEvenish(41)).toEqual('Oddish');
     })
   })
 });
