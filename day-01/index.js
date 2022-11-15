@@ -37,4 +37,12 @@ function fizzBuzz(n) {
     })
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz };
+function multiplesOfN(n) {
+  const multiples = [];
+  for (let i = n; i <= 50; i += n) {
+    multiples.push(i);
+  };
+  return multiples;
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN };
