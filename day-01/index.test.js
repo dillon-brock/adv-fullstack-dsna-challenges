@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -39,5 +39,10 @@ describe('primitive code challenges', () => {
       expect(multiplesOfN(25)).toEqual([25, 50]);
       expect(multiplesOfN(75)).toEqual([]);
     });
+  })
+  describe('equalSides', () => {
+    it('should return index in array where left side sum is equal to right side sum', () => {
+      expect(equalSides([1, 100, 50, -51, 1, 1])).toEqual(1);
+    })
   })
 });

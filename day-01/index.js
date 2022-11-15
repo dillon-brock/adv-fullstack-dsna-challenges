@@ -45,4 +45,16 @@ function multiplesOfN(n) {
   return multiples;
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN };
+function equalSides(numbers) {
+  let i = 0;
+  while (i < numbers.length) {
+    if (numbers.slice(0, i)
+    .reduce((a, b) => a + b, 0) === numbers
+    .slice(i + 1)
+    .reduce((a, b) => a + b, 0)) return i;
+    i++;
+  }
+  return -1;
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides };
