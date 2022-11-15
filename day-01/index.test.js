@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, anagrams } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -15,6 +15,12 @@ describe('primitive code challenges', () => {
     it('should return evenish if the sum of digits is even and oddish if the sum of digits is odd', () => {
       expect(oddishOrEvenish(121)).toEqual('Evenish');
       expect(oddishOrEvenish(41)).toEqual('Oddish');
+    })
+  })
+  describe('anagrams', () => {
+    it('should return true if words are anagrams of each other, false otherwise', () => {
+      expect(anagrams('superintended', 'unpredestined')).toEqual(true);
+      expect(anagrams('pictorialness', 'documentarily')).toEqual(false);
     })
   })
 });

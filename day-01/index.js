@@ -22,4 +22,8 @@ function oddishOrEvenish(number) {
   return digitSum % 2 === 0 ? 'Evenish' : 'Oddish'
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish };
+function anagrams(wordOne, wordTwo) {
+  return wordOne.split('').sort().join('') === wordTwo.split('').sort().join('');
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams };
