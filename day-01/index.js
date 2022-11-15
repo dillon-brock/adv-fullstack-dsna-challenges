@@ -63,4 +63,16 @@ const addPunctuation = (punctuation) => {
   return (sentence) => sentence + punctuation;
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides, addPunctuation };
+//Recursive challenge:
+function rootDigit(n) {
+  let sum = n.toString()
+    .split('')
+    .map(d => +d)
+    .reduce((a, b) => a + b);
+  if (sum.toString().length > 1) {
+    sum = rootDigit(sum);
+  }
+  return sum;
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides, addPunctuation, rootDigit };

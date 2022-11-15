@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides, addPunctuation } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides, addPunctuation, rootDigit } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -59,3 +59,13 @@ describe('HOF code challenges', () => {
     })
   })
 })
+
+describe('recursive code challenge', () => {
+  describe('rootDigit', () => {
+    it('should return the sum of all digits once that sum is one digit', () => {
+      expect(rootDigit(123)).toEqual(6);
+      expect(rootDigit(4322)).toEqual(2);
+      expect(rootDigit(999888777)).toEqual(9);
+    });
+  });
+});
