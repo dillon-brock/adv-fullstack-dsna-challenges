@@ -26,4 +26,15 @@ function anagrams(wordOne, wordTwo) {
   return wordOne.split('').sort().join('') === wordTwo.split('').sort().join('');
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams };
+function fizzBuzz(n) {
+  return [...Array(n).keys()]
+    .map(x => {
+      x = x + 1;
+      if (x % 15 === 0) return 'FizzBuzz';
+      if (x % 5 === 0) return 'Buzz';
+      if (x % 3 === 0) return 'Fizz';
+      return x;
+    })
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz };

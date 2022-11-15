@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish, anagrams } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -22,5 +22,15 @@ describe('primitive code challenges', () => {
       expect(anagrams('superintended', 'unpredestined')).toEqual(true);
       expect(anagrams('pictorialness', 'documentarily')).toEqual(false);
     })
+  })
+  describe('fizzBuzz', () => {
+    it('should return an array of length n with standard fizzbuzz mutation', () => {
+      expect(fizzBuzz(16)).toEqual([
+        1, 2, 'Fizz', 4, 'Buzz', 
+        'Fizz', 7, 8, 'Fizz', 'Buzz', 
+        11, 'Fizz', 13, 14, 'FizzBuzz', 
+        16
+      ]);
+    });
   })
 });
