@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides, addPunctuation } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -46,3 +46,16 @@ describe('primitive code challenges', () => {
     })
   })
 });
+
+describe('HOF code challenges', () => {
+  describe('addExcitement', () => {
+    it('should add punctuation onto end of sentence', () => {
+      const addExcitement = addPunctuation('!!!');
+      const addUnsure = addPunctuation('?!?');
+      expect(addExcitement('Hello World')).toEqual('Hello World!!!');
+      expect(addExcitement('Pokemon, catch em all')).toEqual('Pokemon, catch em all!!!');
+      expect(addUnsure('Hello World')).toEqual('Hello World?!?');
+      expect(addUnsure('Pokemon, catch em all')).toEqual('Pokemon, catch em all?!?');
+    })
+  })
+})

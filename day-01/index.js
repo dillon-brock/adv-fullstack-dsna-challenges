@@ -57,4 +57,10 @@ function equalSides(numbers) {
   return -1;
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides };
+//HOF challenge:
+
+const addPunctuation = (punctuation) => {
+  return (sentence) => sentence + punctuation;
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, anagrams, fizzBuzz, multiplesOfN, equalSides, addPunctuation };
