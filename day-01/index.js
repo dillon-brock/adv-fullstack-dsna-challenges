@@ -9,9 +9,9 @@ function reverseSentence(str) {
 // primitive challenges
 function titleCase(sentence) {
   return sentence
-  .split(' ')
-  .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-  .join(' ');
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
 }
 
 function oddishOrEvenish(number) {
@@ -19,7 +19,7 @@ function oddishOrEvenish(number) {
     .split('')
     .reduce((a, b) => a + Number(b), 0);
   
-  return digitSum % 2 === 0 ? 'Evenish' : 'Oddish'
+  return digitSum % 2 === 0 ? 'Evenish' : 'Oddish';
 }
 
 function anagrams(wordOne, wordTwo) {
@@ -34,14 +34,14 @@ function fizzBuzz(n) {
       if (x % 5 === 0) return 'Buzz';
       if (x % 3 === 0) return 'Fizz';
       return x;
-    })
+    });
 }
 
 function multiplesOfN(n) {
   const multiples = [];
   for (let i = n; i <= 50; i += n) {
     multiples.push(i);
-  };
+  }
   return multiples;
 }
 
@@ -49,9 +49,9 @@ function equalSides(numbers) {
   let i = 0;
   while (i < numbers.length) {
     if (numbers.slice(0, i)
-    .reduce((a, b) => a + b, 0) === numbers
-    .slice(i + 1)
-    .reduce((a, b) => a + b, 0)) return i;
+      .reduce((a, b) => a + b, 0) === numbers
+      .slice(i + 1)
+      .reduce((a, b) => a + b, 0)) return i;
     i++;
   }
   return -1;
@@ -61,7 +61,7 @@ function equalSides(numbers) {
 
 const addPunctuation = (punctuation) => {
   return (sentence) => sentence + punctuation;
-}
+};
 
 //Recursive challenge:
 function rootDigit(n) {

@@ -9,20 +9,20 @@ describe('primitive code challenges', () => {
   describe('titleCase', () => {
     it('should convert a sentence to title case', () => {
       expect(titleCase('alchemy ROCKS goLD')).toEqual('Alchemy Rocks Gold');
-    })
-  })
+    });
+  });
   describe('oddishOrEvenish', () => {
     it('should return evenish if the sum of digits is even and oddish if the sum of digits is odd', () => {
       expect(oddishOrEvenish(121)).toEqual('Evenish');
       expect(oddishOrEvenish(41)).toEqual('Oddish');
-    })
-  })
+    });
+  });
   describe('anagrams', () => {
     it('should return true if words are anagrams of each other, false otherwise', () => {
       expect(anagrams('superintended', 'unpredestined')).toEqual(true);
       expect(anagrams('pictorialness', 'documentarily')).toEqual(false);
-    })
-  })
+    });
+  });
   describe('fizzBuzz', () => {
     it('should return an array of length n with standard fizzbuzz mutation', () => {
       expect(fizzBuzz(16)).toEqual([
@@ -32,19 +32,19 @@ describe('primitive code challenges', () => {
         16
       ]);
     });
-  })
+  });
   describe('multiplesOfN', () => {
     it('should return an array of multiples of n from 1 to 50', () => {
       expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
       expect(multiplesOfN(25)).toEqual([25, 50]);
       expect(multiplesOfN(75)).toEqual([]);
     });
-  })
+  });
   describe('equalSides', () => {
     it('should return index in array where left side sum is equal to right side sum', () => {
       expect(equalSides([1, 100, 50, -51, 1, 1])).toEqual(1);
-    })
-  })
+    });
+  });
 });
 
 describe('HOF code challenges', () => {
@@ -56,9 +56,9 @@ describe('HOF code challenges', () => {
       expect(addExcitement('Pokemon, catch em all')).toEqual('Pokemon, catch em all!!!');
       expect(addUnsure('Hello World')).toEqual('Hello World?!?');
       expect(addUnsure('Pokemon, catch em all')).toEqual('Pokemon, catch em all?!?');
-    })
-  })
-})
+    });
+  });
+});
 
 describe('recursive code challenge', () => {
   describe('rootDigit', () => {
